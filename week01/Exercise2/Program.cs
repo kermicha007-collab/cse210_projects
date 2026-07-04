@@ -22,19 +22,7 @@ class Program
         else if (gradePercentage >= 70)
         {
             letterGrade = "C";
-        }
-        else if (gradePercentage >= 60)
-        {
-            letterGrade = "D";
-        }
-        else
-        {
-            letterGrade = "F";
-        }
-        else if (gradePercentage >= 70)
-        {
-            letterGrade = "C";
-        }
+        }  
         else if (gradePercentage >= 60)
         {
             letterGrade = "D";
