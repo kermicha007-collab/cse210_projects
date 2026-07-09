@@ -15,7 +15,7 @@ class Program
        //int guess = int.Parse(guessInput);
 
        Random randomGenerator = new Random();
-       int number = randomGenerator.Next(1, 11);
+       int number = randomGenerator.Next(1, 100);
 
        int guess = -1;
 
