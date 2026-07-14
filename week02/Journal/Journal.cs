@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+
 class Journal
 {
     List<Entry> _entries = new List<Entry>();
@@ -45,4 +49,6 @@ class Journal
                 }
             }
         }
+    }
+    
 }
