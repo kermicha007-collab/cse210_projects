@@ -15,7 +15,7 @@ public class Order
         _products.Add(product);
     }
     
-    public double shippingCost(Product product)
+    public double ShippingCost(Product product)
     {
         if (_customerAddress.EndsWith("USA"))
         {
@@ -32,7 +32,7 @@ public class Order
         double totalCost = 0;
         foreach (Product product in _products)
         {
-            totalCost += (product._price * product._quantity) + shippingCost(product);
+            totalCost += (product._price * product._quantity) + ShippingCost(product);
         }
         return totalCost;
     }
