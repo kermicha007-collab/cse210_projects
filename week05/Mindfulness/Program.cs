@@ -29,7 +29,7 @@ class Program
         }
         else if (input == "2")
         {
-            Activity reflectionActivity = new Activity("Reflection", "This activity will guide you through a reflection exercise.", duration);
+            Activity reflectionActivity = new Activity("Reflection", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.", duration);
             reflectionActivity.DisplayStartingMessage();
             // Simulate the activity duration
             System.Threading.Thread.Sleep(reflectionActivity._duration * 1000);

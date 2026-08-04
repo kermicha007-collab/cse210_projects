@@ -17,7 +17,18 @@ public class Activity
         Console.WriteLine($"Starting {_name} for {_duration} seconds.");
         Console.WriteLine(_description);
     }
+    
+    public void Animation()
+    {
 
+        Console.Write("+");
+
+        Thread.Sleep(500);
+
+        Console.Write("\b \b"); // Erase the + character
+        Console.Write("-"); // Replace it with the - character
+
+    }
     public int GetDuration()
     {
          Console.WriteLine("For how many seconds would you like to perform the activity?");
