@@ -1,16 +1,34 @@
 public class Breathing : Activity
 {
-    public Breathing(string name, string description, int duration) : base(name, description, duration)
+    public Breathing() : base("Breathing", "This activity will help you relax by focusing on your breath.", 0)
     {
     }
-
+  
     public void StartBreathingActivity()
     {
-        DisplayStartingMessage();
         Console.WriteLine("Breathe in...");
-        Thread.Sleep(5000); // Simulate breathing in for 5 seconds
+        Thread.Sleep(1000); // Simulate breathing in for 1 second
+        Console.WriteLine("5");
+        Thread.Sleep(1000); // Simulate breathing in for 1 second
+        Console.WriteLine("4");
+        Thread.Sleep(1000); // Simulate breathing in for 1 second
+        Console.WriteLine("3");
+        Thread.Sleep(1000); // Simulate breathing in for 1 second
+        Console.WriteLine("2");
+        Thread.Sleep(1000); // Simulate breathing in for 1 second
+        Console.WriteLine("1");
+        Thread.Sleep(1000); // Simulate breathing in for 1 second
         Console.WriteLine("Breathe out...");
-        Thread.Sleep(5000); // Simulate breathing out for 5 seconds
-        DisplayEndingMessage();
+        Thread.Sleep(1000); // Simulate breathing out for 1 seconds
+        Console.WriteLine("5");
+        Thread.Sleep(1000); // Simulate breathing out for 1 seconds
+        Console.WriteLine("4");
+        Thread.Sleep(1000); // Simulate breathing out for 1 seconds
+        Console.WriteLine("3");
+        Thread.Sleep(1000); // Simulate breathing out for 1 seconds
+        Console.WriteLine("2");
+        Thread.Sleep(1000); // Simulate breathing out for 1 seconds
+        Console.WriteLine("1");
+        Thread.Sleep(1000); // Simulate breathing out for 1 seconds
     }
 }

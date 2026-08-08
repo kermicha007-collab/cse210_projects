@@ -1,6 +1,6 @@
 public class Reflexion : Activity
 {
-    public Reflexion(string name, string description, int duration) : base(name, description, duration)
+    public Reflexion() : base("Reflection", "This activity will help you reflect on times in your life when you have shown strength and resilience.", 0)
     {
     }
     
@@ -48,6 +48,9 @@ public class Reflexion : Activity
     {
         DisplayStartingMessage();
         Console.WriteLine(GetRandomPrompt());
+        Console.WriteLine("Press Enter to continue...");
+        Console.ReadLine();
+        Console.WriteLine(GetRandomQuestion());
         Thread.Sleep(5000); // Simulate reflection for 5 seconds
         Console.WriteLine(GetRandomQuestion());
         Thread.Sleep(5000); // Simulate reflection for 5 seconds

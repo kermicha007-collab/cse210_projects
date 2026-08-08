@@ -7,41 +7,53 @@ class Program
         Console.WriteLine("Hello World! This is the Mindfulness Project.");
         Menu menu = new Menu();
         menu.Display();
-
         string input = Console.ReadLine();
-        // Get duration from an Activity instance (GetDuration is not static)
-        int duration;
-        var tempActivity = Activator.CreateInstance(typeof(Activity), new object[] { "Temp", "", 0 });
-        duration = (int)typeof(Activity).GetMethod("GetDuration").Invoke(tempActivity, null);
+        
         if (input == "1")
-        {
+        { 
+            Activity activity = new Activity("", "", 0);
+            int duration = activity.GetDuration();
             Activity breathingActivity = new Activity("Breathing", "This activity will help you relax by focusing on your breath.", duration);
             breathingActivity.DisplayStartingMessage();
-            // Simulate the activity duration
-            System.Threading.Thread.Sleep(breathingActivity._duration * 1000);
-            Breathing breathing = new Breathing("Breathing", "This activity will help you relax by focusing on your breath.", duration);
+            breathingActivity.Animation();
+
+            Breathing breathing = new Breathing();
             while (duration > 0)
             {
                 breathing.StartBreathingActivity();
                 duration -= 10; // Each breathing cycle takes 10 seconds (5 in + 5 out)
             }
             breathingActivity.DisplayEndingMessage();
+            
         }
         else if (input == "2")
         {
+            Activity activity = new Activity("", "", 0);
+            int duration = activity.GetDuration();
             Activity reflectionActivity = new Activity("Reflection", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.", duration);
             reflectionActivity.DisplayStartingMessage();
-            // Simulate the activity duration
-            System.Threading.Thread.Sleep(reflectionActivity._duration * 1000);
+            reflectionActivity.Animation();
+            
+            Reflexion reflexion = new Reflexion();
+            reflexion.StartReflexionActivity();
+
             reflectionActivity.DisplayEndingMessage();
         }
         else if (input == "3")
         {
-            Activity listingActivity = new Activity("Listing", "This activity will help you list things that bring you joy.", duration);
+            Activity activity = new Activity("", "", 0);
+            int duration = activity.GetDuration();
+            Activity listingActivity = new Activity("Listing", "This activity will help you list items related to a specific topic", duration);
             listingActivity.DisplayStartingMessage();
-            // Simulate the activity duration
-            System.Threading.Thread.Sleep(listingActivity._duration * 1000);
+            
+            Listing listing = new Listing();
+            listing.StartListingActivity();
+        
             listingActivity.DisplayEndingMessage();
+        }
+        else if (input == "4")
+        {
+            Console.WriteLine("Exiting the program. Goodbye!");
         }
         else
         {
