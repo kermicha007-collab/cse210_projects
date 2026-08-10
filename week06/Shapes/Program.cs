@@ -6,13 +6,20 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Shapes Project.");
 
+        List<Shape> shapes = new List<Shape>();
+
         Square square = new Square("Blue", 4);
-        Console.WriteLine($"The area of the square is: {square.GetArea()}");
+        shapes.Add(square);
 
         Rectangle rectangle = new Rectangle("Red", 5, 3);
-        Console.WriteLine($"The area of the rectangle is: {rectangle.GetArea()}");
+        shapes.Add(rectangle);
 
         Circle circle = new Circle("Green", 2.5);
-        Console.WriteLine($"The area of the circle is: {circle.GetArea()}");
+        shapes.Add(circle);
+
+        foreach (Shape shape in shapes)
+        {
+            Console.WriteLine($"The area of the {shape.GetType().Name} is: {shape.GetArea()}");
+        }
     }
 }
